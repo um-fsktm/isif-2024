@@ -34,7 +34,7 @@ chmod 777 user_create.sh
 Now you should be able to login to your jupyterhub environment with http. If you need https and allow access from public Internet, you will need to configure public DNS record and point to your public ip.
 
 ### Build and run Caddy reverse proxy(for HTTPS access)
-1. Add public A record in your DNS server and point to your Jupyterhub server IP address.
+1. Add public A record in your DNS server and point to your Caddy server IP address.
 2. **cd /caddy-lb**
 3. *Caddyfile* contains reverse proxy configuration. Modify it with your domain name and backend Jupyterhub server IP address and port.
 4. Caddy reverse proxy will create letencrypt certificate automatically.
