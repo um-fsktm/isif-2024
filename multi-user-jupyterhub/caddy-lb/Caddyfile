@@ -1,0 +1,8 @@
+thisisyourdomain.com {
+    reverse_proxy /* 100.100.2.2:8000 {
+        lb_policy cookie sticky_session
+        health_uri /health
+        health_interval 10s
+        health_status 302
+    }
+}
