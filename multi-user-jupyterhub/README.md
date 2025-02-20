@@ -3,7 +3,7 @@
 ## Folders in this repository
 **/p4mn-jupyter** contains docker file to build a jupyter notebook installed with mininet and bmv2. When user login from jupyterhub, a new container with this image will be spawned for the user.<br/>
 **/jupyterhub-deploy-docker/basic-example** contains docker compose file to run Jupyterhub and the jupyterhub_config.py is for the jupyterhub configuration.<br/>
-**/caddy-lb** contains docker compose file to deploy caddy reverse proxy for your Jupyterhub. #By default Jupyterhub is only running https.
+**/caddy-lb** contains docker compose file to deploy caddy reverse proxy for your Jupyterhub. #By default Jupyterhub is only running http.
 
 ## Setup the environment in your machine.
 
