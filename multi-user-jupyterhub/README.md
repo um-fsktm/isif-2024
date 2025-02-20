@@ -1,4 +1,6 @@
 # Guide to setup Jupyterhub environment for hands-on lab
+## What is this about
+Jupyterhub is a multi-user environment. It is able to spawn sandbox containers for each user. This repository will guide you to setup a Jupyterhub service that spawn containers(installed with Mininet, BMV2 software switch) for each user.
 
 ## Folders in this repository
 **/p4mn-jupyter** contains docker file to build a jupyter notebook installed with mininet and bmv2. When user login from jupyterhub, a new container with this image will be spawned for the user.<br/>
