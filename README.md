@@ -24,4 +24,6 @@ Ping test between each nodes success.
 
 To setup BMV2+VXLAN in docker containers, refer to [link](https://github.com/um-fsktm/isif-2025/tree/main/BMV2-VXLAN-setup).
 
+To setup Jupyterhub environment, that spawn containers with mininet+bmv2 installed, refer to [link](https://github.com/um-fsktm/isif-2025/tree/main/multi-user-jupyterhub).
+
 # Training guide
