@@ -27,3 +27,4 @@ To setup BMV2+VXLAN in docker containers, refer to [link](https://github.com/um-
 To setup Jupyterhub environment, that spawn containers with mininet+bmv2 installed, refer to [link](https://github.com/um-fsktm/isif-2025/tree/main/multi-user-jupyterhub).
 
 # Training guide
+1. First training session 1.5h [Introduction to P4 hands-on lab](https://github.com/um-fsktm/isif-2025/tree/57e499c4501676a1a89e6a3593dc7b9860840557/training-materials/Introduction%20to%20P4%2022-Feb-2025) - 20+ participants via Webex
