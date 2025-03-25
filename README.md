@@ -15,8 +15,7 @@ Full mesh of Wireguard tunnel between machines over Internet through tailscale s
 | mm-node | 100.100.6.6  |
 
 Running BMV2 switches in each node, with full mesh VXLAN tunnels to each node.
-
-![image](https://github.com/user-attachments/assets/5edde81d-91c8-481c-baf9-e8bea8cb5f1b)
+![ISIF topology drawio (1)](https://github.com/user-attachments/assets/e1dc70f3-d9d6-4d6b-a118-6bce15d3a133)
 
 ### Connectivity Check
 Ping test between each nodes success.
