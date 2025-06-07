@@ -1,0 +1,22 @@
+{
+  "switches": [
+    {"name": "s1", "device_id": 1, "ip": "127.0.0.1", "port": 50001},
+    {"name": "s2", "device_id": 2, "ip": "127.0.0.1", "port": 50002},
+    {"name": "s3", "device_id": 3, "ip": "127.0.0.1", "port": 50003},
+    {"name": "s4", "device_id": 4, "ip": "127.0.0.1", "port": 50004}
+  ],
+  "hosts": [
+    {"ip": "10.0.0.1", "mac": "00:00:00:00:00:01", "connected_to": "s1", "port": 1},
+    {"ip": "10.0.0.2", "mac": "00:00:00:00:00:02", "connected_to": "s2", "port": 1},
+    {"ip": "10.0.0.3", "mac": "00:00:00:00:00:03", "connected_to": "s3", "port": 1},
+    {"ip": "10.0.0.4", "mac": "00:00:00:00:00:04", "connected_to": "s4", "port": 1}
+  ],
+  "links": [
+    {"source": "s1", "source_port": 2, "target": "s2", "target_port": 2},
+    {"source": "s1", "source_port": 3, "target": "s3", "target_port": 2},
+    {"source": "s1", "source_port": 4, "target": "s4", "target_port": 2},
+    {"source": "s2", "source_port": 3, "target": "s3", "target_port": 3},
+    {"source": "s2", "source_port": 4, "target": "s4", "target_port": 3},
+    {"source": "s3", "source_port": 4, "target": "s4", "target_port": 4}
+  ]
+}
