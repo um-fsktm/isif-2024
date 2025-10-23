@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jupyterhub:
+    image: jupyterhub/jupyterhub
+    container_name: jupyterhub
+    ports:
+      - "100.100.2.2:8000:8000"
+    volumes:
+      - ./jupyterhub_
+config:/srv/jupyterhub
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - JUPYTERHUB_CRYPT_KEY=supersecretkey
+    command: jupyterhub --ip 0.0.0.0 --port 8000

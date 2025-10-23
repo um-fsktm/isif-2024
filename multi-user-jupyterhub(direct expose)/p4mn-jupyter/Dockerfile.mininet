@@ -1,0 +1,66 @@
+# Use the official Jupyter Notebook base image
+FROM jupyter/base-notebook:latest
+
+# Switch to root user to install system dependencies
+USER root
+
+# Update the package list and install Mininet dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential \
+    make \
+    python3-dev \
+    net-tools \
+    iproute2 \
+    iputils-ping \
+    ethtool \
+    vim \
+    wget \
+    curl \
+    sudo \
+    lsb-release \
+    openssh-client \  
+    psmisc \          
+    socat \           
+    xterm \           
+    iperf \           
+    telnet \          
+    help2man \        
+    pyflakes3 \       
+    pylint \          
+    pep8 \            
+    python3-pip \     
+    cgroup-tools \    
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Mininet from source
+RUN git clone https://github.com/mininet/mininet.git /tmp/mininet && \
+    cd /tmp/mininet && \
+    make install && \
+    rm -rf /tmp/mininet
+
+# Install Python dependencies for P4 and Mininet
+RUN pip install --no-cache-dir \
+    ipython \
+    networkx \
+    matplotlib \
+    scapy \
+    thrift \
+    grpcio \
+    p4runtime
+
+# Add jovyan user to sudoers (passwordless sudo)
+RUN echo "Defaults secure_path=\"/opt/conda/bin:/opt/conda/condabin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"" >> /etc/sudoers
+RUN echo "jovyan ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Switch back to the jovyan user (default user in Jupyter images)
+USER $NB_UID
+
+# Set the working directory
+WORKDIR /home/jovyan/work
+
+# Expose the Jupyter Notebook port (default is 8888)
+EXPOSE 8888
+
+# Start the Jupyter Notebook server
+#CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
