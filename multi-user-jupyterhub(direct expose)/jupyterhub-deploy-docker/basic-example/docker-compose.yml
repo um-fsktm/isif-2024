@@ -28,8 +28,7 @@ services:
       - "./user_create.sh:/user_create.sh"
 
     ports:
-#      - "100.100.2.2:8000:8000"
-      - "203.80.21.17:8000:8000"
+      - "100.100.2.2:8000:8000"
     environment:
       # This username will be a JupyterHub admin
       JUPYTERHUB_ADMIN: admin
