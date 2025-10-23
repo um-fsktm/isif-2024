@@ -24,7 +24,7 @@ Jupyterhub is a multi-user environment. It is able to spawn sandbox containers f
 ```
 4. *user_create.sh* contains the list of user and password to be created and access to the Jupyterhub.
 5. Deploy the Jupyterhub software and run it in background ```sudo docker compose up -d```
-6. Access the Jupyterhub container and create users
+6. Access the Jupyterhub container and create users.(the default admin user password is P@ssw0rd which in the user_create.sh script)
 ```
 sudo docker exec -it jupyterhub /bin/bash
 cd /
