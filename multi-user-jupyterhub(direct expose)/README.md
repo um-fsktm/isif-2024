@@ -2,6 +2,10 @@
 ## What is this about
 Jupyterhub is a multi-user environment. It is able to spawn sandbox containers for each user. This repository will guide you to setup a Jupyterhub service that spawn containers(installed with Mininet, BMV2 software switch) for each user.
 
+The lab environment is based on the assumptions:
+- Ubuntu environment
+- Docker installed
+
 ## Folders in this repository
 **/p4mn-jupyter** contains docker file to build a jupyter notebook installed with mininet and bmv2. When user login from jupyterhub, a new container with this image will be spawned for the user.<br/>
 **/jupyterhub-deploy-docker/basic-example** contains docker compose file to run Jupyterhub and the jupyterhub_config.py is for the jupyterhub configuration.<br/>
