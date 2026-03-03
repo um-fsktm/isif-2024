@@ -86,6 +86,9 @@ WORKDIR /home/jovyan/work
 RUN git clone https://github.com/p4lang/tutorials.git
 
 COPY ./data . 
+
+COPY --chown=jovyan:jovyan ./dhcpsnooping ./tutorials/exercises/dhcpsnooping
+
 # Expose the Jupyter Notebook port (default is 8888)
 EXPOSE 8888
 
